@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aad5fae4-ad24-4864-bfb3-2528cb2c0d22" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/static/music/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/music/static/music/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/music/templates/music/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,15 +25,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="108" />
-          <entry key="html" value="643" />
+          <entry key="css" value="114" />
+          <entry key="html" value="2119" />
           <entry key="py" value="559" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="643" />
-          <entry key="PLAIN_TEXT" value="108" />
+          <entry key="HTML" value="2119" />
+          <entry key="PLAIN_TEXT" value="114" />
           <entry key="Python" value="559" />
         </counts>
       </usages-collector>
@@ -62,22 +62,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/music/static/music/images/background.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="46">
+              <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
+              <folding>
+                <element signature="e#1424#1430#0" expanded="true" />
+                <element signature="e#1658#1664#0" expanded="true" />
+                <element signature="e#2325#2331#0" expanded="true" />
+                <element signature="e#2560#2566#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,14 +244,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="885" height="915" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="925" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23058543" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09806094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3392857" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33879092" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974457" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,9 +380,6 @@
     <entry file="file://$PROJECT_DIR$/music/static/music/images/background.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/music/static/music/images/background.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -388,17 +387,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/music/static/music/images/background.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/music/static/music/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="46">
+          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
+          <folding>
+            <element signature="e#1424#1430#0" expanded="true" />
+            <element signature="e#1658#1664#0" expanded="true" />
+            <element signature="e#2325#2331#0" expanded="true" />
+            <element signature="e#2560#2566#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
