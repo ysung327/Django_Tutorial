@@ -12,7 +12,7 @@
     <session id="1605016753">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.34" value="1" />
@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/music/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <marker date="1532846549728" expanded="true" signature="102:107" ph="..." />
@@ -86,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/music/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2">
-              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="44" />
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="44" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <marker date="1532846549672" expanded="true" signature="369:374" ph="..." />
@@ -237,7 +237,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../clone_website" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -322,7 +322,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32908162" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33163264" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33163264" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32908162" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32908162" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32908162" />
@@ -468,7 +468,7 @@
     <entry file="file://$PROJECT_DIR$/music/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <marker date="1532846549728" expanded="true" signature="102:107" ph="..." />
@@ -510,7 +510,7 @@
     <entry file="file://$PROJECT_DIR$/music/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="44" />
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="44" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <marker date="1532846549672" expanded="true" signature="369:374" ph="..." />

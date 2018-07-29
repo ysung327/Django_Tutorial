@@ -19,3 +19,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+# 정육각 https://www.jeongyookgak.com/index
+# 라프텔 https://laftel.net/
+# 픽아트 https://pickart.co.kr/
