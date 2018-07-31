@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('', )
+    #path('aboutpickart/', )
+    #path('howtorental/',  )
+    #path('example/',  )
+    #path('contactus/',  )
 ]
 
 # 정육각 https://www.jeongyookgak.com/index
