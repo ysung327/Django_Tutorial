@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def home(request):
 
-     return render(request, 'home/home.html')
+     return render(request, 'home.html')
 
 #def about_pickart(request):
 #def how_to_rental(request):
