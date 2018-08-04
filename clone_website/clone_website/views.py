@@ -3,9 +3,9 @@ from django.views.generic import View
 from django.shortcuts import render
 
 
-def home(request):
+def index(request):
 
-     return render(request, 'home.html')
+     return render(request, 'index.html')
 
 #def about_pickart(request):
 #def how_to_rental(request):
