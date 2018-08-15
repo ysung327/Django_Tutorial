@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'clone_website/templates'),
+            os.path.join(BASE_DIR, 'clone_website', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -120,3 +120,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'clone_website/static')
+    ] #reference : https://docs.djangoproject.com/ko/2.1/howto/static-files/
+''' 1. collectstatic collects all static files to the STATIC_ROOT (directory)
+    This STATIC_ROOT will be called STATIC_URL by short.
+    ex) STATIC_ROOT = clone_website/staticfiles/
+        STATIC_URL = /static/
+        clone_website/staticfiles/ = /static/
+    Then i could use static files like this.
+    <a href="{% static "style.css" %}">
+    
+    2. if i want to adds additional locations then use STATICFILES_DIR.
+    It refers to files which should be included in STATIC_ROOT by collectstatic.
+    when i use STATICFILES_DIR = [
+        ("downloads", "/clone_website/stats.css")
+    ]
+    then collectstatic add "/clone_website/stats" files in 'downloads' folder
+     which is subdirectory of STATIC_ROOT. 
+     it means i should use stats file like this. 
+     <a href="{% static "downloads/stats.css" %}"> 
+     '''

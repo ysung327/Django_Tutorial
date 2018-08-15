@@ -1,20 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}픽아트 | 그림렌탈{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="container">
+    <div class="container" id="container1">
             <div id="branding">
-                <a><img src="" alt=""></a>
+                <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}"></a>
             </div>
-        </div>
-        <div></div>
-    </header>
+            <div id="menu-container">
+                    <div class="menus"><a href="#">회사소개</a>
+                       <div class="submenu-box">
+                           <div><a href="#">회사 소개</a></div>
+                           <div><a href="#">렌탈 설명서</a></div>
+                       </div>
+                    </div>
+                    <div class="menus"><a href="#">렌탈하기</a>
+                        <div class="submenu-box">
+                            <div><a href="#">작품별 렌탈하기</a></div>
+                            <div><a href="#">렌탈 이용권</a></div>
+                        </div>
+                    </div>
+                    <div class="menus"><a href="#">그림 추천</a>
+                        <div class="submenu-box">
+                            <div><a href="#">테마별 그림 추천</a></div>
+                            <div><a href="#">온라인 큐레이팅 신청</a></div>
+                            <div><a href="#">오프라인 큐레이팅 신청</a></div>
+                        </div>
+                    </div>
+                    <div class="menus"><a href="#">작가 보기</a>
+                        <div class="submenu-box">
+                            <div><a href="#">작가 보기</a></div>
+                            <div><a href="#">매거진</a></div>
+                        </div>
+                    </div>
+                    <div class="menus"><a href="#">이벤트</a>
+                        <div class="submenu-box">
+                            <div><a href="#">진행중인 이벤트</a></div>
+                        </div>
+                    </div>
+                    <div class="menus"><a href="#">게시판</a>
+                        <div class="submenu-box">
+                            <div><a href="#">FAQ</a></div>
+                            <div><a href="#">설치사례</a></div>
+                            <div><a href="#">설치후기</a></div>
+                        </div>
+                    </div>
+            </div>
+            <div id="icon">
+
+            </div>
+    </div>
     
 {% block body %}
 {% endblock %}
+
+    <footer>
+        <div class="container" id="footer-container">
+            <div id="footer-menu">
+                <div><a href="#">about us</a></div>
+                <div><a href="#">contact us</a></div>
+                <div><a href="#">이용약관</a></div>
+                <div><a href="#">개인정보처리방침</a></div>
+                <div><a href="#">사업자정보확인</a></div>
+            </div>
+            <p>
+                상호명: 주식회사 픽아트 | 대표: 류두선 | 개인정보관리책임자: 류두선 | 전화: 02-6949-5949 | 이메일: info@pickart.co.kr<br>
+                주소: 서울특별시 서초구 서초대로 48길 108 (서초동, 정일빌딩) 501호 | 사업자등록번호: 824-87-00163 | 통신판매: 제2017-서울서초-0495호
+            </p>
+            <p style="line-height: 2em;">
+                <span>안전구매(에스크로) 서비스 가맹점</span><br>
+                <span style="font-size: 16px; font-weight: bold;">
+                    본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단복사, 배포 등을 금합니다.
+                </span><br>
+                <span style="font-size: 16px; font-weight: bold;">&copy; PICK ART</span>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
