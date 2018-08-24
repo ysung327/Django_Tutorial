@@ -11,10 +11,25 @@ li{
 }
 
 .container{
-    width: 90%;
+    width: 85%;
     padding: 20px;
     margin: auto;
 }
+
+/* button */
+
+.button1{
+    position: absolute;
+    top: 16px;
+    right: 0;
+    float: right;
+    background: #1c1c1c;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+}
+
 
 /* header */
 
@@ -78,6 +93,7 @@ li{
     color: white;
     font-weight: bold;
     position: relative;
+    height: 700px;
 }
 
 .img-cover{

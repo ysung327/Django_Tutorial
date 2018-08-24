@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-{% extends 'site_header.html' %}
+{% extends 'site_base.html' %}
 
 <head>
     <meta charset="UTF-8">
     {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 {% block body %}
 <body>
+
+    <!-- showcase -->
     <div id="showcase">
         <img src="{% static 'images/showcase-background.png' %}" style="height: 100%; width: 100%; z-index: -1; position: relative;">
         <p style="position: absolute; top: 15%; left: 400px; z-index: 1">
@@ -29,8 +32,22 @@
         </p>
         <div class="img-cover"></div>
     </div>
-    <div class="container" style="display: flex; align-items: center; flex-direction: column;">
+
+    <!-- 작품 렌탈하기 -->
+    <div class="container">
         <div style="height: 100px;"></div>
+        <div class="title" style="position: relative;">
+            <span>작품 렌탈하기</span><br>
+            <span style="font-size: 17px; font-weight: initial; letter-spacing: 0;">월 4,900원으로 유명 작가들의 작품을 즐기실 수 있는 기회!</span>
+            <a href="#" role="button" class="btn button1">전체보기</a>
+        </div>
+        <hr>
+
+    </div>
+
+    <!-- 진행중인 이벤트 -->
+    <div class="container" style="display: flex; align-items: center; flex-direction: column;">
+        <div style="height: 100px; width: 100%;"></div>
         <div class="title">진행중인 이벤트</div>
         <div style="display: flex; width: 80%; padding: 16px;">
             <a href="#"><img src="{% static 'images/event1.png' %}" style="max-width: 100%; max-height: 100%;"></a>
