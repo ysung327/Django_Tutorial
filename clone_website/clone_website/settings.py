@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rental'
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,6 @@ STATICFILES_DIRS = [
      it means i should use stats file like this. 
      <a href="{% static "downloads/stats.css" %}"> 
      '''
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
