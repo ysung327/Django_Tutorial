@@ -3,11 +3,14 @@ from django.db import models
 # Create your models here.
 
 class Artist(models.Model):
-    artist_name = models.CharField(max_length=250)
-    artist_photo = models.FileField()
+    name_kor = models.CharField(max_length=250)
+    name_eng = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
+    detail = models.CharField(max_length=1000)
+    artist_photo = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.artist_name
+        return self.name_eng
 
 
 class Art(models.Model):
