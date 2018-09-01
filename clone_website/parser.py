@@ -1,12 +1,11 @@
 import bs4 as bs
 import urllib.request
-import re
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "clone_website.settings")
 import django
 django.setup()
 
-from rental.models import Artist, Art
+from rental.models import Artist
 
 
 #defining fuction which extract photos url into dict.
