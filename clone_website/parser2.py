@@ -1,12 +1,11 @@
 import bs4 as bs
 import urllib.request
-import re
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "clone_website.settings")
 import django
 django.setup()
 
-from rental.models import Art
+from rental.models import Art, Artist
 
 
 #defining fuction which extract photos url into dict.
@@ -92,20 +91,49 @@ def extract_detail():
     return dict
 
 
-def extract_preview():
-    # previews
-    paras = soup.find_all('p', attrs={"style": "text-align:center"})  # 필요없는 데이터까지 포함함.
-    # 필요없는 데이터 거르기.
-    for para in paras:
-        para_soup = bs.BeautifulSoup(str(para), 'lxml')
+
+def extract_artist():
+    hrefs = extract_url()
+    artists = []
+    i = 0
+
+    for href in hrefs:
+        sauce = urllib.request.urlopen('https://pickart.co.kr/{}'.format(href)).read()
+        soup = bs.BeautifulSoup(sauce, 'lxml')
+        para = soup.find_all('span', attrs={"style": "font-weight:normal;"})
+
+        # artist
+        if not artists:
+            artists = [para[1].text]
+        else:
+            artists.append(para[1].text)
+
+    #print(artists)
+
+    for artist in artists:
+        try:
+            obj = Artist.objects.get(name_eng=artist)
+        except Artist.DoesNotExist:
+            obj = Artist(name_eng=artist)
+            obj.save()
+        artists[i] = obj
+        i = i + 1
+
+    dict = {'artist': artists}
+    print(dict)
+    return dict
+
 
 
 #main
 if __name__=='__main__':
     dict = {}
+    dict2 = {}
     dict = extract_detail()
-
+    dict2 = extract_artist()
+    dict.update(dict2)
+    
     for t in range(len(dict['art_title'])):
-        Art(art_title=dict['art_title'][t], size=dict['size'][t],
+        Art(artist=dict['artist'][t], art_title=dict['art_title'][t], size=dict['size'][t],
                media=dict['media'][t], frame=dict['frame'][t],
                edition=dict['edition'][t], detail=dict['detail'][t]).save()
