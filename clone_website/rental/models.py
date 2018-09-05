@@ -23,6 +23,7 @@ class Art(models.Model):
     frame = models.CharField(max_length=250)
     edition = models.CharField(max_length=250)
     detail = models.CharField(max_length=1000)
+    view = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.art_title + ' - ' + self.artist.name_eng

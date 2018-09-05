@@ -31,6 +31,8 @@ def extract_url():
 
 def extract_detail():
     hrefs = extract_url()
+    views =[[]]
+    artists=[]
     art_title = []
     size = []
     media = []
@@ -38,6 +40,7 @@ def extract_detail():
     edition = []
     detail = []
     i = 0
+    cnt = 0
 
     for href in hrefs:
         sauce = urllib.request.urlopen('https://pickart.co.kr/{}'.format(href)).read()
@@ -75,6 +78,13 @@ def extract_detail():
         else:
             edition.append(para[5].text)
 
+        # artist
+        if not artists:
+            artists = [para[1].text]
+        else:
+            artists.append(para[1].text)
+
+
         print(para[0].text)
         print(len(art_title))
 
@@ -85,61 +95,66 @@ def extract_detail():
         else:
             detail.append(para[1].text)
 
-        # artist
-        if not artists:
-            artists = [para[1].text]
+
+         # views
+        view = extract_view(href)
+        if cnt == 0:
+            views[0] = view
         else:
-            artists.append(para[1].text)
+            views.append(view)
+        cnt = cnt + 1
 
-        #print(artists)
+    # print(artists)
+    for artist in artists:
+        try:
+            obj = Artist.objects.get(name_eng=artist)
+        except Artist.DoesNotExist:
+            obj = Artist(name_eng=artist)
+            obj.save()
+        artists[i] = obj
+        i = i + 1
 
-        for artist in artists:
-            try:
-                obj = Artist.objects.get(name_eng=artist)
-            except Artist.DoesNotExist:
-                obj = Artist(name_eng=artist)
-                obj.save()
-            artists[i] = obj
-            i = i + 1
-
-    dict = {'artist': artists, 'art_title': art_title, 'size': size, 'media': media, 'frame': frame, 'edition': edition, 'detail': detail}
+    print(views)
+    dict = {'artist': artists, 'art_title': art_title, 'size': size, 'media': media, 'frame': frame, 'edition': edition, 'detail': detail, 'view': views}
     print(dict)
     return dict
 
 
 
-def extract_view():
-    hrefs = extract_url()
+def extract_view(href):
+
     views = []
 
-    for href in hrefs:
-        sauce = urllib.request.urlopen('https://pickart.co.kr/{}'.format(href)).read()
-        soup = bs.BeautifulSoup(sauce, 'lxml')
-        paras = soup.find_all('p', attrs={"style": "text-align:center"})
-        #print(paras)
+    sauce = urllib.request.urlopen('https://pickart.co.kr/{}'.format(href)).read()
+    soup = bs.BeautifulSoup(sauce, 'lxml')
+    paras = soup.find_all('p', attrs={"style": "text-align:center"})
+    #print(paras)
 
-        for para in paras:
-            para = bs.BeautifulSoup(str(para), 'lxml')
-            if para.img != None:
-                print(para.img['src'])
-                if not views:
-                    views = [para.img['src']]
-                else:
-                    views.append(para.img['src'])
+    for para in paras:
+        para = bs.BeautifulSoup(str(para), 'lxml')
+        if para.img != None:
+            if not views:
+                views = [para.img['src']]
+            else:
+                views.append(para.img['src'])
+    print(views)
+
+    try:
         del views[views.index('https://contents.sixshop.com/thumbnails/uploadedFiles/34398/product/image_1520934322840_1000.png')]
         del views[views.index('https://contents.sixshop.com/thumbnails/uploadedFiles/34398/product/image_1520923180099_1000.jpg')]
-        print(views)
+    except ValueError:
+        pass
 
+    print(views)
+    return(views)
 
 
 #main
 if __name__=='__main__':
     dict = {}
     dict = extract_detail()
-    view = []
     for t in range(len(dict['art_title'])):
         Art(artist=dict['artist'][t], art_title=dict['art_title'][t], size=dict['size'][t],
                media=dict['media'][t], frame=dict['frame'][t],
-               edition=dict['edition'][t], detail=dict['detail'][t]).save()
-'''
-extract_view()
+               edition=dict['edition'][t], detail=dict['detail'][t], view=dict['view'][t]).save()
+
